@@ -1,11 +1,4 @@
-/**
- * Created by parthivshah on 28/04/16.
- */
-/*
- * Warning! For as long as this comment exists at the top of this file, this is
- * just a hacky experiment. I'm just messing around at the moment, so this code
- * is kind of questionable at points. Give it time!
- */
+
 
 var properties = {
     filename: 'data/streamgraph.csv',

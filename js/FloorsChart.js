@@ -2,7 +2,7 @@
  * Created by djboo on 4/18/2016.
  */
 
-var numFloors = ["0", "1-3", "4-6", "7-10", "11-20", "21-30", "31+"];
+var numFloors = ["0", "1-5", "6-10", "11-20", "21-30", "31+"];
 
 FloorsChart = function (_parentElement, _data) {
 
@@ -65,7 +65,6 @@ FloorsChart.prototype.initVis = function(){
     vis.svg.append("text")
         .attr("x", 200)
         .attr("y", 0)
-        .text("Histogram of Buildings by Number of Floors")
         .style("stroke", "#ffffff");
 
     // TO-DO: (Filter, aggregate, modify data)
@@ -79,7 +78,7 @@ FloorsChart.prototype.initVis = function(){
 FloorsChart.prototype.wrangleData = function(){
     var vis = this;
 
-    var sel = document.getElementById("floor-choice");
+    var sel = document.getElementById("property-choice");
     var choice = sel.options[sel.selectedIndex].value;
 
     // Filter bars based on selections
@@ -101,9 +100,8 @@ FloorsChart.prototype.wrangleData = function(){
     // Encode the floor info while wrangling the data
     var floorinfo = [
         {"floornum": "0", "amount": 0},
-        {"floornum": "1-3", "amount": 0},
-        {"floornum": "4-6", "amount": 0},
-        {"floornum": "7-10", "amount": 0},
+        {"floornum": "1-5", "amount": 0},
+        {"floornum": "6-10", "amount": 0},
         {"floornum": "11-20", "amount": 0},
         {"floornum": "21-30", "amount": 0},
         {"floornum": "31+", "amount": 0}
@@ -113,23 +111,20 @@ FloorsChart.prototype.wrangleData = function(){
         if (d["NUM_FLOORS"] == 0) {
             floorinfo[0]["amount"] += 1;
         }
-        else if (d["NUM_FLOORS"] <= 3) {
+        else if (d["NUM_FLOORS"] <= 5) {
             floorinfo[1]["amount"] += 1;
         }
-        else if (d["NUM_FLOORS"] <= 6) {
+        else if (d["NUM_FLOORS"] <= 10) {
             floorinfo[2]["amount"] += 1;
         }
-        else if (d["NUM_FLOORS"] <= 10) {
+        else if (d["NUM_FLOORS"] <= 20) {
             floorinfo[3]["amount"] += 1;
         }
-        else if (d["NUM_FLOORS"] <= 20) {
+        else if (d["NUM_FLOORS"] <= 30) {
             floorinfo[4]["amount"] += 1;
         }
-        else if (d["NUM_FLOORS"] <= 30) {
-            floorinfo[5]["amount"] += 1;
-        }
         else {
-            floorinfo[6]["amount"] += 1;
+            floorinfo[5]["amount"] += 1;
         }
     });
 

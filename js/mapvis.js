@@ -54,7 +54,7 @@ var newcustomLayer = L.geoJson(null, {
 			radius: 8,
 			fillColor: "#f00",
 			color: "#000",
-			weight: 1,
+			weight: 0,
 			opacity: 1,
 			fillOpacity: feature.properties.GROSS_VALUE/100000000
 		});

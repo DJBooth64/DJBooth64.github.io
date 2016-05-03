@@ -27,6 +27,13 @@
             color: #FFFFFF;
             margin-bottom: 7px;
         }
+        .headline2 {
+            font-family: 'Open Sans', sans-serif;
+            color: #FFFFFF;
+            margin-bottom: 7px;
+            font-size: 20px;
+        }
+
 
         .chatter {
             font-family: 'Open Sans', sans-serif;
@@ -115,7 +122,6 @@
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="research.html">RESEARCH</a></li>
                 <li><a href="process.html">PROCESS</a></li>
-                <li><a href="beta.html">BETA</a></li>
             </ul>
 
         </div>
@@ -135,9 +141,16 @@
 
         <div class="middleRule"></div>
 
+        <h2 class ="headline2" align="center"> Property Ownership in City of Boston</h2>
+
+        </br>
+
+
         <p id="chart">
 
         <div class = "para" align = "justify">
+        </br>
+        </br>
         The real estate market at the City of Boston demonstrates a diverse body of
         ownerships. Click each city to see what companies they have in Boston. Click
         the top white bar to go back.
@@ -146,9 +159,18 @@
 
         <div class="lowerRule"></div>
 
+        <h2 class ="headline2" align="center"> Real Estate Development by Property Type</h2>
+
         <div class="stream" align = "center"></div>
 
         <div class='chart' id='chart2'></div>
+
+        <div class = "para" align = "justify">
+            </br>
+            </br>
+            The streamgraph displays a trend of development regarding property type in the City of Boston. Each stream represents a property type, which has been developed in different quantities throughout the years.
+
+        </div>
 
         <div class="bottomRule"></div>
 
@@ -163,32 +185,10 @@
 
         <div id="ptype" align ="center"></div>
 
-        <p>The above visualization allows the viewer to understand the most valuable properties
-           by city designation in Boston.  Red values correspond to commercial properties, green
-           to residential, and blue to other (mostly industrial).  We immediately find that the
-           commercial properties are by far the most valuable, as the top 20 properties are all
-           commercial properties.  However, even the industrial properties (having the lowest maximum
-           value) have values in the hundreds of millions of dollars, speaking to the size of industry
-           in the city and the high value in this real estate market.</p>
         <div class="bottomRule2"></div>
 
-        <p>What type of properties would you like to look at?</p>
-        <select id="floor-choice" onchange=selectFloors()>
-            <option value="all">All</option>
-            <option value="commercial">Commercial</option>
-            <option value="residential">Residential</option>
-            <option value="other">Other</option>
-        </select>
 
         <div id="floors" align = "center"></div>
-
-        <p>The above visualization allows the viewer to sort by the same criteria as above, but view
-           a histogram of all such properties by the number of floors in the building.  All the histograms
-           are significantly right-skewed, in that the vast majority of buildings have a small number of floors,
-           but there certainly are a fair number of outliers at the top.  Sorting by commercial allows the viewer
-           to see the large number of skyscrapers in Boston, and both commercial and other properties have a large
-           proportion of land for future development or conservation (meaning no building on the property).  Finally,
-           residential properties have the smallest right tail, as nearly all land between 1 and 6 floors.</p>
 
         <div class="bottomRule3"></div>
 
@@ -196,7 +196,7 @@
 
             <h1>Property Bundles</h1>
             <p>Use this visualization to explore the values of different property bundles.
-               The buttons allow you to add random properties to the given bundle
+               The buttons allow you to add to the given bundle (at present only at random)
                or remove the most recently added item.</p>
         </div>
         <div class="col-md-3">
@@ -220,26 +220,25 @@
             <div class="col-md-3" id="bundleinfo">
                 <p>Add or remove properties from these bundles, then compare!</p>
                 <br/>
-                <p>Bundle 1: Red</p>
+                <p>Bundle 1 (Red):</p>
                 <ul id="bundle1list">
 
                 </ul>
                 <br/>
-                <p>Bundle 2: Blue</p>
+                <p>Bundle 2 (Blue):</p>
                 <ul id="bundle2list">
 
                 </ul>
-                <p>If a purple bar appears, that property is contained in both bundles.</p>
             </div>
             <div class="col-md-6" id="bundlebarlines"></div>
             <div class="col-md-3" id="bundlebars"></div>
         </div>
-        <p>This visualization models the process of investing in Real Estate Investment Trusts (REITs), bundles
-           of properties which are sold as a group instead of as individual pieces.  By adding properties to
-           each bundle, the bars in the central chart represent all the properties in each bundle and the bar chart
-           on the right is a comparison of the total values of each bundle, with the higher valued bundle behind the
-           smaller one.  Although the addition and deletion from these bundles is random, the principles of the
-           investment idea are conveyed through the exploration of different packages of properties.</p>
+        <script>
+
+        </script>
+
+
+
     </div>
 </div>
 

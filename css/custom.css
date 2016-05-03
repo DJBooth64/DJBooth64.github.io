@@ -14,15 +14,6 @@ body {
 .highlight {
     color:dimgray;
 }
-.notHovered {
-    opacity: 0.3;
-}
-
-.btn-toolbar {
-    text-align: center;
-    display: inline-block;
-    float: middle;
-}
 
 #stats {
     position: absolute;
@@ -31,17 +22,6 @@ body {
     display: none;
 }
 
-.btn {
-    min-width: 120px;
-    color: black;
-    font-weight: 300;
-}
-
-.btn.active {
-    background-color: black;
-    color: white;
-    font-weight: 800;
-}
 
 
 .d3-tip {
